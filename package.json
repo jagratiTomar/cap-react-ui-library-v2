@@ -1,6 +1,10 @@
 {
-  "name": "cap-react-ui-library-v2",
-  "version": "0.1.0",
+  "name": "@capillarytech/cap-react-ui-library",
+  "version": "2.0.0",
+  "description": "Cap HOCs for capillary style guid and antd components",
+  "main": "index.js",
+  "author": "meharaj",
+  "repository": "https://github.com/jagratiTomar/cap-react-ui-library-v2.git",
   "private": true,
   "dependencies": {
     "@babel/core": "7.1.6",
@@ -37,6 +41,7 @@
     "mini-css-extract-plugin": "0.4.3",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
+    "plop": "^2.2.0",
     "pnp-webpack-plugin": "1.1.0",
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",
@@ -58,8 +63,11 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "build:docs": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "build": "npm run build:copy-all-files",
+    "build:copy-all-files": "node scripts/copy-all-files.js",
+    "generate": "plop --plopfile scripts/generators/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"

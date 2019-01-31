@@ -1,0 +1,31 @@
+/**
+* {{ properCase name }}Info
+*/
+import React, { Component } from "react";
+import PropertyTable from  '../helpers/PropertyTable';
+import { {{properCase name}} } from "../../../src/index";
+import "./_{{ camelCase name }}Info.scss";
+
+const infoData = [
+  {
+    "key": 1,
+    "property": "-",
+    "description": "-",
+    "type": "-",
+    "default": "-"
+  },
+];
+
+export default class {{ properCase name }}Info extends Component { // eslint-disable-line react/prefer-stateless-function
+
+render() {
+  return (
+    <div className="{{dashCase name}}-info">
+      <div className="{{dashCase name}}-showcase">
+        <{{properCase name}} />
+      </div>
+      <PropertyTable data={infoData}/>
+    </div>
+    );
+  }
+}
