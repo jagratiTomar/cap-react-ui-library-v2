@@ -1,0 +1,64 @@
+@import "~@capillarytech/cap-style-guide/styles/main";
+
+.cap-button{
+  height: $CAP_SS_L;
+  padding: 0 $CAP_SS_S;
+  font-family: $BODY_FONT;
+  font-style: normal;
+  font-weight: $FONT_WEIGHT_SEMIBOLD;
+  border-radius: 6px;
+  font-size: $CAP_SS_S3;
+  min-width: 5rem;
+
+  &.ant-btn-primary {
+    background-color: $CAP_PR02;
+    color: $CAP_SC07;
+    border: none;
+
+    &:hover {
+      background-color: $CAP_PR01;
+    }
+  }
+
+  &.ant-btn-ghost {
+    border-color: $CAP_PR02;
+    color: $CAP_PR02;
+
+    &:hover {
+      background-color: $CAP_PR01;
+      color: $CAP_SC07;
+    }
+
+    &[disabled], &[disabled]:hover {
+      background-color: transparent;
+      border-color: $CAP_SC03;
+      color: $CAP_SC03;
+    }
+  }
+
+  &.ant-btn-danger {
+    color: #2e89df;
+    background-color: $CAP_SC07 !important;
+    border-color: $CAP_SC07 !important;
+
+    &:hover {
+      background-color: $CAP_PR01 !important;
+      color: $CAP_SC07;
+      border-color: $CAP_SC07 !important;
+    }
+  }
+
+  &[disabled]:not(.ant-btn-ghost), &[disabled]:hover:not(.ant-btn-ghost) {
+    background-color: $CAP_SC03;
+    border-color: $CAP_SC03;
+    color: $CAP_SC07;
+  }
+
+  .before-button{
+    margin-right: $CAP_SS_VS;
+  }
+
+  .after-button{
+    margin: 0 0 0 $CAP_SS_VS;
+  }
+}

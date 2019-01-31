@@ -1,0 +1,23 @@
+.cap-button-info{
+  .cap-button-showcase{
+    .ant-card-body{
+      padding: 0px!important;
+    }
+    .btndiv{
+      padding: 10px;
+    }
+    .dashed-border{
+      border-bottom: 1px dashed;
+      margin: 10px 0 10px 0;
+    }
+    #embed-nav {
+      display: none!important;
+    }
+    .table-row{
+      border: 1px solid grey;
+      .gutter-row{
+        border-right: 1px solid grey;
+      }
+    }
+  }
+}
