@@ -1,0 +1,51 @@
+// Color Palette - Primary Colors
+
+$CAP_PRIMARY: #47af46;
+
+// Color Palette - Secondary Colors
+
+$CAP_SEC: #2466ea;
+
+// Color Palette - Custom Colors
+$CAP_ORANGE: #f87d23;
+$CAP_YELLOW: #fec52e;
+$CAP_BLUE: #23cccc;
+$CAP_PURPLE: #8517e5;
+$CAP_PINK: #e51fa3;
+$CAP_RED: #ea213a;
+
+// Color Palette - GREYS
+$CAP_G01: #091e42;
+$CAP_G02: #253858;
+$CAP_G03: #42526e;
+$CAP_G04: #5e6c84;
+$CAP_G05: #97a0af;
+$CAP_G06: #b3bac5;
+$CAP_G07: #dfe2e7;
+$CAP_G08: #ebecf0;
+$CAP_G09: #f4f5f7;
+$CAP_G10: #fafbfc;
+
+
+// Fonts
+
+$HEADING_FONT: proxima-nova, open-sans, sans-serif !important;
+$BODY_FONT: open-sans, sans-serif !important;
+$HEADING_FONT_COLOR: "rgba(102, 102, 102, 1)";
+$FONT_WEIGHT_REGULAR: 400;
+$FONT_WEIGHT_SEMIBOLD: 600;
+$FONT_WEIGHT_BOLD: 800;
+
+// Sizes & Spacings (1em converts to 16px on desktop)
+
+$CAP_SS_VS: 0.5em;
+$CAP_SS_S: 1em;
+$CAP_SS_R: 1.5em;
+$CAP_SS_L: 2em;
+$CAP_SS_VL: 2.5em;
+$CAP_NSS_S1: -0.5rem;
+$CAP_SS_S2: 0.625rem; //10px
+$CAP_SS_S3: 0.875rem; //14px
+$CAP_SS_R1: 1.25rem; //20px
+$CAP_SS_R3: 1.75rem; //28px
+$CAP_SS_L2: 2.25rem; //36px
