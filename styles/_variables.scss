@@ -1,10 +1,17 @@
 // Color Palette - Primary Colors
 
-$CAP_PR01: #47af46;
+$CAP_PRIMARY: (
+  base: #47af46,
+  hover: #1f9a1d,
+  disabled: #a1d8a0
+);
 
 // Color Palette - Secondary Colors
 
-$CAP_SC01: #2466ea;
+$CAP_SECONDARY: (
+  base: #2466ea,
+  light: rgba(#2466ea, .1)
+);
 
 // Color Palette - Custom Colors
 $CAP_ORANGE: #f87d23;
