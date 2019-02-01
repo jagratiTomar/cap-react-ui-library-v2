@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-import CapButtonInfo from '../CapButtonInfo/CapButtonInfo';
-import CapTestInfo from '../CapTestInfo/CapTestInfo';
+import CapButtonDoc from '../src/CapButtonDoc';
+import NavigationBarDoc from '../src/NavigationBarDoc';
 //imported for docs
+
 
 
 
@@ -12,10 +13,11 @@ class ComponentSwitcher extends Component {
   render() {
     switch (this.props.type) {
       case 'capButton':
-        return <CapButtonInfo />;
-      case 'capTest':
-        return <CapTestInfo />;
+        return <CapButtonDoc />;
+      case 'navigationBar':
+        return <NavigationBarDoc />;
       //components for docs
+
 
 
 

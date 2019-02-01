@@ -1,9 +1,9 @@
 /**
-* {{ properCase name }}Doc
+* NavigationBarDoc
 */
 import React, { Component } from "react";
 import PropertyTable from  '../../helpers/PropertyTable';
-import { {{properCase name}} } from "../../components";
+import { NavigationBar } from "../../components";
 import "./info.scss";
 
 const infoData = [
@@ -16,13 +16,13 @@ const infoData = [
   },
 ];
 
-export default class {{ properCase name }}Doc extends Component { // eslint-disable-line react/prefer-stateless-function
+export default class NavigationBarDoc extends Component { // eslint-disable-line react/prefer-stateless-function
 
 render() {
   return (
-    <div className="{{dashCase name}}-info">
-      <div className="{{dashCase name}}-showcase">
-        <{{properCase name}} />
+    <div className="navigation-bar-info">
+      <div className="navigation-bar-showcase">
+        <NavigationBar />
       </div>
       <PropertyTable data={infoData}/>
     </div>

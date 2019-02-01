@@ -1,9 +1,4 @@
-/**
- * Created by vivek on 26/10/17.
- */
-/* eslint strict: ["off"] */
 
-'use strict';
 
 const documentationExists = require('../utils/documentationExists');
 
@@ -29,7 +24,7 @@ module.exports = {
       abortOnFail: true,
     }, {
       type: 'add',
-      path: '../../components/{{properCase name}}Doc/_{{camelCase name}}Doc.scss',
+      path: '../../src/{{properCase name}}Doc/info.scss',
       templateFile: './documentation/style.scss.hbs',
       abortOnFail: true,
     }, {
