@@ -66,6 +66,16 @@ module.exports = {
       path: '../../components/{{properCase name}}/tests/index.test.js',
       templateFile: './component/test.js.hbs',
       abortOnFail: true,
+    }, {
+      type: 'add',
+      path: '../../components/{{properCase name}}/_{{camelCase name}}.scss'
+    },
+    {
+      type: 'modify',
+      path: '../../components/index.js',
+      pattern: /(.*exported for library)/g,
+      templateFile: './component/exportComponent.js.hbs',
+      abortOnFail: true,
     }];
 
     // If they want a i18n messages file

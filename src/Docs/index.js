@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu, Layout } from 'antd';
 // import {CapPageHeader} from '../../../src/index';
-import ComponentSwitcher from '../ComponentSwitcher';
+import ComponentSwitcher from '../../helpers/ComponentSwitcher';
 const logo = require('../../assets/images/capillary_dark.png');
 const { Content, Footer, Sider } = Layout;
 const MenuItem = Menu.Item;
@@ -35,8 +35,9 @@ export class Docs extends React.Component { // eslint-disable-line react/prefer-
           </div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={[this.state.menuSelected]} onClick={this.onMenuItemClick}>
             <MenuItem key="capButton"><span className="nav-text">CapButton</span></MenuItem>
-            <MenuItem key="capTest"><span>CapTest</span></MenuItem>
+            <MenuItem key="navigationBar"><span>NavigationBar</span></MenuItem>
             {/*Menu items for components*/}
+
 
 
 
