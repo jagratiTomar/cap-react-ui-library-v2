@@ -11,7 +11,7 @@ export class Docs extends React.Component { // eslint-disable-line react/prefer-
     super(props);
     this.state = {
       value: "",
-      menuSelected: "capButton",
+      menuSelected: "navigationBar",
     };
     this.onChange = this.onChange.bind(this);
     this.onMenuItemClick = this.onMenuItemClick.bind(this);
@@ -34,8 +34,8 @@ export class Docs extends React.Component { // eslint-disable-line react/prefer-
             <img className="cap-logo" style={{ width: "180px", margin: "10px" }} src={logo} alt="Capillary Technologies" />
           </div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={[this.state.menuSelected]} onClick={this.onMenuItemClick}>
-            <MenuItem key="capButton"><span className="nav-text">CapButton</span></MenuItem>
             <MenuItem key="navigationBar"><span>NavigationBar</span></MenuItem>
+            <MenuItem key="capButton"><span className="nav-text">CapButton</span></MenuItem>
             {/*Menu items for components*/}
 
 

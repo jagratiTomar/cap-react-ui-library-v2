@@ -34,12 +34,22 @@ export default class CapButton extends React.Component { // eslint-disable-line 
         className={this.props.className ? `cap-button ${this.props.className}` : "cap-button"}
         type={type}
       >
-        {addonBefore &&
-          <span className="before-button"> {addonBefore}</span>
+        {addonBefore
+          && (
+            <span className="before-button">
+              {' '}
+              {addonBefore}
+            </span>
+          )
         }
         {React.Children.toArray(this.props.children)}
-        {addonAfter &&
-          <span className="after-button"> {addonAfter}</span>
+        {addonAfter
+          && (
+            <span className="after-button">
+              {' '}
+              {addonAfter}
+            </span>
+          )
         }
       </Button>
     );
