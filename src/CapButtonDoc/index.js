@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { CapButton } from '../../components';
-import PropertyTable from  '../../helpers/PropertyTable';
+import PropertyTable from '../../helpers/PropertyTable';
 import './info.scss';
 
 const api = [
@@ -56,13 +56,12 @@ const api = [
 ];
 
 class CapButtonDoc extends Component {
-
   render() {
     return (
       <div className="cap-button-info">
         <div style={{display: 'flex', marginTop: 20}} className="cap-button-showcase">
           <div style={{margin: 'auto'}}><CapButton>Primary</CapButton></div>
-          <div style={{margin: 'auto'}}><CapButton addonAfter={<span>+</span>} >addonAfter</CapButton></div>
+          <div style={{margin: 'auto'}}><CapButton addonAfter={<span>+</span>}>addonAfter</CapButton></div>
           <div style={{margin: 'auto'}}><CapButton addonBefore={<span className="anticon anticon-right"></span>}>addonBefore</CapButton></div>
           <div style={{margin: 'auto'}}><CapButton type="secondary">Secondary</CapButton></div>
           <div style={{margin: 'auto'}}><CapButton type="secondary">Secondary</CapButton></div>
@@ -70,7 +69,7 @@ class CapButtonDoc extends Component {
           <div style={{margin: 'auto'}}><CapButton type="dashed">Dashed</CapButton></div>
           <div style={{margin: 'auto'}}><CapButton disabled>disabled</CapButton></div>
         </div>
-        <PropertyTable data={api}/>
+        <PropertyTable data={api} />
       </div>
     );
   }

@@ -30,13 +30,13 @@ const productsList = [
   { label: 'Membercare', value: 'Membercare' },
   { label: 'Loyalty manager', value: 'Loyalty manager' },
   { label: 'Essential insights', value: 'Essential insights' },
-]
+];
 
 const menuItems = [
   { label: 'Campaigns', link: '/campaigns', key: "campaigns" },
   { label: 'Incentive', link: '/incentives', key: "incentive" },
-  { label: 'Audience', link: '/Audience', key: "audience" }
-]
+  { label: 'Audience', link: '/Audience', key: "audience" },
+];
 
 const sidebarItems = [
   {
@@ -48,23 +48,18 @@ const sidebarItems = [
         key: 'segments',
         children: [
           {
-            title: 'Campaigns',
+            title: 'Campaigns Long Long Name Test',
             key: 'campaigns',
-            link: '/campaigns'
+            link: '/campaigns',
           },
           {
             title: 'Incentive',
             key: 'incentive',
-            link: '/incentive'
-          }
-        ]
-      }
+            link: '/incentive',
+          },
+        ],
+      },
     ],
-  },
-  {
-    title: 'Creatives',
-    key: 'creatives',
-    link: '/creatives'
   },
   {
     title: 'Data Exports',
@@ -73,29 +68,33 @@ const sidebarItems = [
       {
         title: 'Exports',
         key: 'exports',
-        link: '/exports'
-      }
-    ]
-  }
-]
+        link: '/exports',
+      },
+    ],
+  },
+  {
+    title: 'Creatives',
+    key: 'creatives',
+    link: '/creatives',
+  },
+];
 
 export default class NavigationBarDoc extends Component { // eslint-disable-line react/prefer-stateless-function
-
   constructor(props) {
     super(props);
     this.state = {
       selectedOrg: "buckle",
       selectedProduct: "Campaign manager",
-      selectedMenuItem: 'incentive'
-    }
+      selectedMenuItem: 'incentive',
+    };
   }
 
   handleOrgChange = (value) => {
-    this.setState({ selectedOrg: value })
+    this.setState({ selectedOrg: value });
   }
 
   handleProductChange = (value) => {
-    this.setState({ selectedProduct: value })
+    this.setState({ selectedProduct: value });
   }
 
   onSettingsClick = () => {
@@ -103,38 +102,39 @@ export default class NavigationBarDoc extends Component { // eslint-disable-line
   }
 
   onMenuItemClick = (key) => {
-    this.setState({ selectedMenuItem: key })
+    this.setState({ selectedMenuItem: key });
   }
 
   render() {
+    const { selectedOrg, selectedProduct, selectedMenuItem } = this.state;
     return (
       <div className="navigation-bar-info">
         <div className="navigation-bar-showcase">
           <NavigationBar
             primarySelectProps={{
               items: orgsList,
-              selectedItem: this.state.selectedOrg,
+              selectedItem: selectedOrg,
               handleItemChange: this.handleOrgChange,
             }}
             secondarySelectProps={{
               items: productsList,
-              selectedItem: this.state.selectedProduct,
+              selectedItem: selectedProduct,
               handleItemChange: this.handleProductChange,
             }}
             menuProps={{
               items: menuItems,
-              selectedItem: this.state.selectedMenuItem
+              selectedItem: selectedMenuItem,
             }}
             sidebarProps={{
               sidebarItems,
               onMenuItemClick: this.onMenuItemClick,
-              selectedMenuItem: this.state.selectedMenuItem,
+              selectedMenuItem,
             }}
-            userName={"Jagrati"}
+            userName="Jagrati"
             onSettingsClick={this.onSettingsClick}
           />
         </div>
-        {/* <PropertyTable data={infoData} /> */}
+        <PropertyTable data={infoData} />
       </div>
     );
   }
