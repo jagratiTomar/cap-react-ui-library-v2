@@ -1,6 +1,5 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Tree, Input, Icon } from 'antd';
-import remove from 'lodash/remove';
 import classNames from 'classnames';
 
 const DirectoryTree = Tree.DirectoryTree;
@@ -9,7 +8,6 @@ const { TreeNode } = Tree;
 const clsPrefix = 'cap-sidebar';
 
 export class Sidebar extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
