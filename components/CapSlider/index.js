@@ -7,7 +7,7 @@ import React from 'react';
 import './_capSlider.scss'
 import { Slider } from 'antd';
 import PropTypes from 'prop-types';
-
+var classNames = require('classnames');
 
 class CapSlider extends React.Component { // eslint-disable-line react/prefer-stateless-function
   translateType(type) {
@@ -24,20 +24,21 @@ class CapSlider extends React.Component { // eslint-disable-line react/prefer-st
     return tipFormatter;
   }
   render() {
-    const formatter = this.translateType(this.props.type);
-    const { defaultValue, disabled} = this.props;
+    const {type, ...rest} = this.props;
+    const formatter = this.translateType(type);
     return (
       <div>
-        <Slider tipFormatter={formatter}  defaultValue={defaultValue} disabled={disabled} />
+        <Slider tipFormatter={formatter}  {...rest} className={classNames("cap-slider",this.props.className)}>
+          {React.Children.toArray(this.props.children)}
+        </Slider>
       </div>
     );
   }
 }
 
 CapSlider.propTypes = {
-  type: PropTypes.string,
-  defaultValue:PropTypes.number,
-  disabled:PropTypes.bool
+  children: PropTypes.any,
+  className: PropTypes.string,
 };
 
 export default CapSlider;

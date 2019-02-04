@@ -36,9 +36,9 @@ render() {
   return (
     <div className="cap-slider-info">
       <div className="cap-slider-showcase">
-      <div style={{margin: 'auto'}}><CapSlider>Default</CapSlider></div>
-      <div style={{margin: 'auto'}}><CapSlider type='ratio' defaultValue={40} disabled={true}>Ratio</CapSlider></div>
-      <div style={{margin: 'auto'}}><CapSlider type='ratio' defaultValue={40} disabled={false}>Ratio</CapSlider></div>
+      <div style={{margin: 'auto'}}><CapSlider>Normal Slider</CapSlider></div>
+      <div style={{margin: 'auto'}}><CapSlider type='ratio' defaultValue={40} disabled={true}>Ratio disable Slider</CapSlider></div>
+      <div style={{margin: 'auto'}}><CapSlider type='ratio' defaultValue={40} disabled={false}>Ratio Slider</CapSlider></div>
       </div>
       <PropertyTable data={infoData}/>
     </div>

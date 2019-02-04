@@ -52,6 +52,7 @@
     "react-app-polyfill": "^0.2.0",
     "react-dev-utils": "^7.0.1",
     "react-dom": "^16.7.0",
+    "react-test-renderer": "^16.7.0",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.0",
@@ -78,16 +79,14 @@
   ],
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
+      "components/**/tests/*.js"
     ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
       "react-app-polyfill/jsdom"
     ],
     "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+      "<rootDir>/components/**/tests/*.js"
     ],
     "testEnvironment": "jsdom",
     "testURL": "http://localhost",

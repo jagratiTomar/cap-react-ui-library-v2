@@ -36,7 +36,9 @@ export class Docs extends React.Component { // eslint-disable-line react/prefer-
           <Menu theme="dark" mode="inline" defaultSelectedKeys={[this.state.menuSelected]} onClick={this.onMenuItemClick}>
             <MenuItem key="capButton"><span className="nav-text">CapButton</span></MenuItem>
             <MenuItem key="navigationBar"><span>NavigationBar</span></MenuItem>
+            <MenuItem key="capSlider"><span>CapSlider</span></MenuItem>
             {/*Menu items for components*/}
+
 
 
 
