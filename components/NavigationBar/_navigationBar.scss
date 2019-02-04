@@ -2,6 +2,7 @@
 
 $clsPrefix: cap-navbar;
 $orgSelectPrefix: cap-select;
+$sidebar: cap-sidebar;
 
 .#{$clsPrefix}-header {
   background-color: #ffffff;
@@ -21,6 +22,7 @@ $orgSelectPrefix: cap-select;
   cursor: pointer;
   padding: 0px 0px 0px 8px;
   margin-right: 8px;
+  height: 48px;
   &.open {
     border-radius: 4px;
     border: 1px solid $CAP_G06;
@@ -29,7 +31,7 @@ $orgSelectPrefix: cap-select;
 
 .#{$orgSelectPrefix}-selected-value {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: $FONT_WEIGHT_MEDIUM;
   display: flex;
   align-items: center;
 }
@@ -41,27 +43,43 @@ $orgSelectPrefix: cap-select;
   max-width: 120px;
 }
 
+.#{$clsPrefix}-menu-item {
+  &.ant-menu-item {
+    color: $CAP_G04;
+  }
+  &.ant-menu-item-selected,
+  &.ant-menu-item:hover {
+    color: $CAP_G01;
+    border-bottom: 2px solid $CAP_G01;
+  }
+}
+
 .#{$clsPrefix}-setting {
   margin-left: 8px;
   cursor: pointer;
 }
+.#{$clsPrefix}-user {
+  margin-left: 60px;
+}
 
 .#{$clsPrefix}-user,
 .#{$orgSelectPrefix}-selected-icon {
+  font-family: $FONT_FAMILY;
   border-radius: 50%;
   background-color: $CAP_G07;
   padding: 0px 10px;
   margin-right: 8px;
-  font-weight: bold;
+  font-weight: $FONT_WEIGHT_MEDIUM;
   height: 32px;
   display: flex;
   align-items: center;
+  font-size: 16px;
 }
 
 .#{$orgSelectPrefix}-header {
   padding: 0 16px 20px 16px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: $FONT_WEIGHT_MEDIUM;
 }
 
 .#{$orgSelectPrefix}-select-item {
@@ -107,24 +125,89 @@ $orgSelectPrefix: cap-select;
   .ant-popover-arrow {
     display: none;
   }
-  .#{$orgSelectPrefix}-search {
-    position: relative;
-    margin-bottom: 20px;
-    padding: 0 16px;
-    input {
-      padding: 4px 25px;
-    }
-    .anticon-close {
-      position: absolute;
-      right: 25px;
-      top: 30%;
-      color: $CAP_ICON;
-    }
-    .anticon-search {
-      left: 25px;
-      position: absolute;
-      top: 30%;
-      color: $CAP_ICON;
-    }
+}
+
+.#{$sidebar}-search,
+.#{$orgSelectPrefix}-search {
+  position: relative;
+  margin-bottom: 20px;
+  .anticon-close {
+    position: absolute;
+    right: 25px;
+    top: 30%;
+    color: $CAP_ICON;
   }
+  .anticon-search {
+    left: 25px;
+    position: absolute;
+    top: 30%;
+    color: $CAP_ICON;
+  }
+}
+
+.#{$orgSelectPrefix}-search {
+  padding: 0 16px;
+  input {
+    padding: 4px 25px;
+    height: 40px;
+  }
+}
+
+.#{$sidebar}-search {
+  margin-top: 16px;
+  padding-right: 8px;
+  .anticon-search {
+    left: 10px;
+  }
+  input {
+    height: 40px;
+    padding: 4px 30px;
+  }
+}
+
+.#{$sidebar} {
+  max-width: 200px;
+  background-color: $CAP_G10;
+}
+
+.#{$sidebar}-tree {
+  li span.ant-tree-iconEle {
+    display: none;
+  }
+}
+
+.#{$sidebar}-tree > li.parent-node > span.ant-tree-node-content-wrapper:before,
+.#{$sidebar}-tree .ant-tree-child-tree > li.parent-node > span.ant-tree-node-content-wrapper:before {
+  display: none;
+}
+
+.#{$sidebar}-tree > li.leaf-node > span.ant-tree-node-content-wrapper:before,
+.#{$sidebar}-tree .ant-tree-child-tree > li.leaf-node > span.ant-tree-node-content-wrapper:before {
+  width: 2px;
+}
+
+.#{$sidebar}-tree > li.leaf-node.selected > span.ant-tree-node-content-wrapper:before,
+.#{$sidebar}-tree .ant-tree-child-tree > li.leaf-node.selected > span.ant-tree-node-content-wrapper:before {
+  background: #1890ff;
+}
+.cap-sidebar-tree-node.leaf-node:hover {
+  background-color: rgba(36, 102, 234, 0.1);
+}
+
+.ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper.ant-tree-node-selected,
+.ant-tree.ant-tree-directory .ant-tree-child-tree > li span.ant-tree-node-content-wrapper.ant-tree-node-selected {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.ant-tree.ant-tree-directory > li.ant-tree-treenode-selected > span.ant-tree-switcher,
+.ant-tree.ant-tree-directory .ant-tree-child-tree > li.ant-tree-treenode-selected > span.ant-tree-switcher {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+a,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.65);
 }

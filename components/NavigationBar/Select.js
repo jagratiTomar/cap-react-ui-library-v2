@@ -84,7 +84,7 @@ export class Select extends Component {
                             <Icon type="search" />
                             <Icon onClick={this.clearSearch} type="close" />
                         </div>}
-                        {items.length > 0 ? itemsHtml
+                        {itemsHtml.length > 0 ? itemsHtml
                             : (
                                 <div className={classNames(`${clsPrefix}-no-results`)}>
                                     <img src={WarningIcon} alt={"no-results"} />

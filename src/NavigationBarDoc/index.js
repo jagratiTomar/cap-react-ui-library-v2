@@ -38,6 +38,47 @@ const menuItems = [
   { label: 'Audience', link: '/Audience', key: "audience" }
 ]
 
+const sidebarItems = [
+  {
+    title: 'Favourite Reports',
+    key: 'favourite_reports',
+    children: [
+      {
+        title: 'Segments',
+        key: 'segments',
+        children: [
+          {
+            title: 'Campaigns',
+            key: 'campaigns',
+            link: '/campaigns'
+          },
+          {
+            title: 'Incentive',
+            key: 'incentive',
+            link: '/incentive'
+          }
+        ]
+      }
+    ],
+  },
+  {
+    title: 'Creatives',
+    key: 'creatives',
+    link: '/creatives'
+  },
+  {
+    title: 'Data Exports',
+    key: 'data_exports',
+    children: [
+      {
+        title: 'Exports',
+        key: 'exports',
+        link: '/exports'
+      }
+    ]
+  }
+]
+
 export default class NavigationBarDoc extends Component { // eslint-disable-line react/prefer-stateless-function
 
   constructor(props) {
@@ -61,6 +102,10 @@ export default class NavigationBarDoc extends Component { // eslint-disable-line
 
   }
 
+  onMenuItemClick = (key) => {
+    this.setState({ selectedMenuItem: key })
+  }
+
   render() {
     return (
       <div className="navigation-bar-info">
@@ -77,15 +122,19 @@ export default class NavigationBarDoc extends Component { // eslint-disable-line
               handleItemChange: this.handleProductChange,
             }}
             menuProps={{
-              view: 'horizontal',
               items: menuItems,
               selectedItem: this.state.selectedMenuItem
+            }}
+            sidebarProps={{
+              sidebarItems,
+              onMenuItemClick: this.onMenuItemClick,
+              selectedMenuItem: this.state.selectedMenuItem,
             }}
             userName={"Jagrati"}
             onSettingsClick={this.onSettingsClick}
           />
         </div>
-        <PropertyTable data={infoData} />
+        {/* <PropertyTable data={infoData} /> */}
       </div>
     );
   }
