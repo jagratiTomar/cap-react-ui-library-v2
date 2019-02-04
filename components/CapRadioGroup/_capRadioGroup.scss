@@ -1,0 +1,7 @@
+@import "~@capillarytech/cap-style-guide/styles/main";
+
+.cap-radio-group{
+  .cap-radio:not(:last-child){
+    margin-right: 24px;
+  }
+}
