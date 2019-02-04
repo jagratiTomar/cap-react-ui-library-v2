@@ -9,9 +9,16 @@ import "./info.scss";
 const infoData = [
   {
     key: 1,
-    property: "-",
-    description: "-",
-    type: "-",
+    property: "primarySelectProps",
+    description: "section props for first select component. Format: {items: [], selectedItem: '', handleItemChange: ()=>{}}",
+    type: "object",
+    default: "-",
+  },
+  {
+    key: 2,
+    property: "secondarySelectProps",
+    description: "section props for first second component. Format: {items: [], selectedItem: '', handleItemChange: ()=>{}}",
+    type: "object",
     default: "-",
   },
 ];
@@ -125,11 +132,11 @@ export default class NavigationBarDoc extends Component { // eslint-disable-line
               items: menuItems,
               selectedItem: selectedMenuItem,
             }}
-            sidebarProps={{
-              sidebarItems,
-              onMenuItemClick: this.onMenuItemClick,
-              selectedMenuItem,
-            }}
+            // sidebarProps={{
+            //   sidebarItems,
+            //   onMenuItemClick: this.onMenuItemClick,
+            //   selectedMenuItem,
+            // }}
             userName="Jagrati"
             onSettingsClick={this.onSettingsClick}
           />
