@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "extends": "react-app",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "flowtype"
+  ],
+  "rules": {}
+}
