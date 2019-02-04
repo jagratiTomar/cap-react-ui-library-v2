@@ -9,17 +9,16 @@ function TableHOC(columns, defaultTitle) {
         pagination: false,
         title,
         dataSource: this.props.data,
-        columns: columns,
+        columns,
         style: { marginTop: 30 },
       };
       return (
         <Table {...state} />
       );
     }
-  }
+  };
 }
 
 export {
   TableHOC,
-}
-
+};
