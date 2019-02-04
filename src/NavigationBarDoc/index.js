@@ -33,7 +33,9 @@ const productsList = [
 ]
 
 const menuItems = [
-  { label: 'Campaigns', link: '', type: 'link' }
+  { label: 'Campaigns', link: '/campaigns', key: "campaigns" },
+  { label: 'Incentive', link: '/incentives', key: "incentive" },
+  { label: 'Audience', link: '/Audience', key: "audience" }
 ]
 
 export default class NavigationBarDoc extends Component { // eslint-disable-line react/prefer-stateless-function
@@ -43,6 +45,7 @@ export default class NavigationBarDoc extends Component { // eslint-disable-line
     this.state = {
       selectedOrg: "buckle",
       selectedProduct: "Campaign manager",
+      selectedMenuItem: 'incentive'
     }
   }
 
@@ -69,8 +72,12 @@ export default class NavigationBarDoc extends Component { // eslint-disable-line
               selectedItem: this.state.selectedProduct,
               handleItemChange: this.handleProductChange,
             }}
-            menuView="horizontal"
-            menuItems=""
+            menuProps={{
+              view: 'horizontal',
+              items: menuItems,
+              selectedItem: this.state.selectedMenuItem
+            }}
+            userName={"Jagrati"}
           />
         </div>
         <PropertyTable data={infoData} />

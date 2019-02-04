@@ -8,7 +8,7 @@ import DropDownIcon from '../../assets/icons/chevron-down.svg'
 
 const clsPrefix = 'cap-select';
 
-export class OrganizationSelect extends Component {
+export class Select extends Component {
     constructor(props) {
         super(props);
         this.state = {
