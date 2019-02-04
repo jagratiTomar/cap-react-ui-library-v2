@@ -1,0 +1,232 @@
+@import "../../styles/_variables.scss";
+
+$clsPrefix: cap-navbar;
+$orgSelectPrefix: cap-select;
+$sidebar: cap-sidebar;
+
+.#{$clsPrefix}-header {
+  background-color: #ffffff;
+  padding: 0;
+}
+
+.#{$clsPrefix}-divider {
+  height: 70%;
+  align-self: center;
+}
+
+.#{$orgSelectPrefix}-selection {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0px 0px 0px 8px;
+  margin-right: 8px;
+  height: 48px;
+  &.open {
+    border-radius: 4px;
+    border: 1px solid $CAP_G06;
+  }
+}
+
+.#{$orgSelectPrefix}-selected-value {
+  font-size: 16px;
+  font-weight: $FONT_WEIGHT_MEDIUM;
+  display: flex;
+  align-items: center;
+}
+
+.#{$orgSelectPrefix}-selected-value-label {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 120px;
+}
+
+.#{$clsPrefix}-menu-item {
+  &.ant-menu-item {
+    color: $CAP_G04;
+  }
+  &.ant-menu-item-selected,
+  &.ant-menu-item:hover {
+    color: $CAP_G01;
+    border-bottom: 2px solid $CAP_G01;
+  }
+}
+
+.#{$clsPrefix}-setting {
+  margin-left: 8px;
+  cursor: pointer;
+}
+.#{$clsPrefix}-user {
+  margin-left: 60px;
+}
+
+.#{$clsPrefix}-user,
+.#{$orgSelectPrefix}-selected-icon {
+  font-family: $FONT_FAMILY;
+  border-radius: 50%;
+  background-color: $CAP_G07;
+  padding: 0px 10px;
+  margin-right: 8px;
+  font-weight: $FONT_WEIGHT_MEDIUM;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.#{$orgSelectPrefix}-header {
+  padding: 0 16px 20px 16px;
+  font-size: 14px;
+  font-weight: $FONT_WEIGHT_MEDIUM;
+}
+
+.#{$orgSelectPrefix}-select-item {
+  padding: 8px 8px 8px 24px;
+  cursor: pointer;
+  &:hover {
+    background-color: map-get($CAP_SECONDARY, light);
+  }
+  &.selected {
+    color: map-get($CAP_SECONDARY, base);
+    position: relative;
+    &:before {
+      content: " ";
+      width: 2px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      background-color: map-get($CAP_SECONDARY, base);
+    }
+  }
+}
+
+.#{$orgSelectPrefix}-no-results {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .#{$orgSelectPrefix}-no-results-text {
+    margin-top: 8px;
+    text-align: center;
+    color: $CAP_G05;
+    font-size: 12px;
+  }
+}
+
+.#{$orgSelectPrefix}-popover {
+  padding-top: 0;
+  width: 260px;
+  .ant-popover-inner-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .ant-popover-arrow {
+    display: none;
+  }
+}
+
+.#{$sidebar}-search,
+.#{$orgSelectPrefix}-search {
+  position: relative;
+  margin-bottom: 20px;
+  .anticon-close {
+    position: absolute;
+    right: 25px;
+    top: 30%;
+    color: $CAP_ICON;
+  }
+  .anticon-search {
+    left: 25px;
+    position: absolute;
+    top: 30%;
+    color: $CAP_ICON;
+  }
+}
+
+.#{$orgSelectPrefix}-search {
+  padding: 0 16px;
+  input {
+    padding: 4px 25px;
+    height: 40px;
+  }
+}
+
+.#{$sidebar}-search {
+  margin-top: 16px;
+  padding-right: 8px;
+  .anticon-search {
+    left: 10px;
+  }
+  input {
+    height: 40px;
+    padding: 4px 30px;
+  }
+}
+
+.#{$sidebar} {
+  max-width: 200px;
+  background-color: $CAP_G10;
+}
+.#{$sidebar}-accordian {
+  position: relative;
+  .ant-collapse-item {
+    border: none;
+  }
+  .ant-collapse-content-box {
+    padding-bottom: 4px;
+    padding-right: 4px;
+  }
+  .ant-collapse-item > .ant-collapse-header {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    span {
+      line-height: 24px;
+    }
+  }
+  .ant-collapse-borderless {
+    position: static;
+  }
+  .#{$sidebar}-leaf-node {
+    .ant-collapse-header .ant-collapse-arrow {
+      display: none;
+    }
+    .ant-collapse-header {
+      padding-left: 25px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 32px;
+      width: 100%;
+    }
+    &:hover:before {
+      background-color: map-get($CAP_SECONDARY, light);
+    }
+    &.selected {
+      span {
+        color: map-get($CAP_SECONDARY, base);
+      }
+    }
+    &.selected:before {
+      border-left: 2px solid map-get($CAP_SECONDARY, base);
+    }
+  }
+  .ant-collapse-item-disabled > .ant-collapse-header {
+    cursor: pointer;
+    color: $CAP_G01;
+  }
+}
+a,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: $CAP_G01;
+}
