@@ -1,0 +1,99 @@
+@import "../../styles/_variables.scss";
+
+$sidebar: cap-sidebar;
+
+.#{$sidebar} {
+  max-width: 200px;
+  background-color: $CAP_G10;
+}
+
+.#{$sidebar}-search {
+  margin-top: 16px;
+  padding-right: 8px;
+  .anticon-search {
+    left: 10px;
+  }
+  input {
+    height: 40px;
+    padding: 4px 30px;
+  }
+}
+
+.#{$sidebar}-search {
+  position: relative;
+  margin-bottom: 20px;
+  .anticon-close {
+    position: absolute;
+    right: 25px;
+    top: 30%;
+    color: $CAP_ICON;
+  }
+  .anticon-search {
+    left: 25px;
+    position: absolute;
+    top: 30%;
+    color: $CAP_ICON;
+  }
+}
+
+.#{$sidebar}-accordian {
+  position: relative;
+  .ant-collapse-item {
+    border: none;
+  }
+  .ant-collapse-content-box {
+    padding-bottom: 4px;
+    padding-right: 4px;
+  }
+  .ant-collapse-item > .ant-collapse-header {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    span {
+      line-height: 24px;
+    }
+  }
+  .ant-collapse-borderless {
+    position: static;
+  }
+  .#{$sidebar}-leaf-node {
+    .ant-collapse-header .ant-collapse-arrow {
+      display: none;
+    }
+    .ant-collapse-header {
+      padding-left: 25px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 32px;
+      width: 100%;
+    }
+    &:hover:before {
+      background-color: map-get($CAP_SECONDARY, light);
+    }
+    &.selected {
+      span {
+        color: map-get($CAP_SECONDARY, base);
+      }
+    }
+    &.selected:before {
+      border-left: 2px solid map-get($CAP_SECONDARY, base);
+    }
+  }
+  .ant-collapse-item-disabled > .ant-collapse-header {
+    cursor: pointer;
+    color: $CAP_G01;
+  }
+}
+a,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: $CAP_G01;
+}

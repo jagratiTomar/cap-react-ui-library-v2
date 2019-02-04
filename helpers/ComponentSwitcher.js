@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import CapButtonDoc from '../src/CapButtonDoc';
 import NavigationBarDoc from '../src/NavigationBarDoc';
 import CapSliderDoc from '../src/CapSliderDoc';
+import CapSideBarDoc from '../src/CapSideBarDoc';
 //imported for docs
+
 
 
 class ComponentSwitcher extends Component {
@@ -17,7 +19,10 @@ class ComponentSwitcher extends Component {
         return <NavigationBarDoc />;
       case 'capSlider':
         return <CapSliderDoc />;
-        //components for docs
+      case 'capSideBar':
+        return <CapSideBarDoc />;
+      //components for docs
+
 
 
       default:

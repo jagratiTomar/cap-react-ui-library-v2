@@ -73,7 +73,7 @@ module.exports = {
     {
       type: 'modify',
       path: '../../components/index.js',
-      pattern: /(.*exported for library)/g,
+      pattern: /(.*export components)/g,
       templateFile: './component/exportComponent.js.hbs',
       abortOnFail: true,
     }];
