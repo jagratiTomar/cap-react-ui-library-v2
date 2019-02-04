@@ -1,0 +1,61 @@
+@import "~@capillarytech/cap-style-guide/styles/main";
+
+.cap-select{
+  height: $CAP_SS_VL;
+  padding: $CAP_SS_VS 0;
+  border: 0;
+  border-bottom: 1px solid $CAP_SC04;
+  width: 100%;
+  font-size: $CAP_SS_S3;
+  font-family: $BODY_FONT;
+  line-height: $CAP_SS_R;
+  &.ant-select-open {
+    border-bottom: 1px solid $CAP_PR02;
+  }
+  .ant-select-selection__rendered{
+    margin: 0;
+  }
+  .ant-select-arrow {
+    &::before {
+      content: "\E606";
+      color: #707070;
+      font-size: 14px;
+    }
+  }
+}
+.cap-select.ant-select-open .ant-select-arrow {
+  &::before {
+    transform: none;
+    color: #2E89DF;
+  }
+}
+.ant-select-dropdown {
+  .ant-select-dropdown-menu{
+    max-height: 192px;
+    overflow-y: auto;
+    margin-top: $CAP_SS_VS;
+    .ant-select-dropdown-menu-item{
+      font-size: $CAP_SS_S3;
+      font-family: $BODY_FONT;
+      line-height: $CAP_SS_R;
+      padding: 4px 0 0 $CAP_SS_S;
+      cursor: pointer;
+      text-decoration: none;
+      color: $CAP_CU04;
+      height: $CAP_SS_L;
+      justify-content: center;
+    }
+    .ant-select-dropdown-menu-item-active, .ant-select-dropdown-menu-item:hover{
+      background-color: $CAP_SC05;
+    }
+    .ant-select-dropdown-menu-item-selected{
+      background-color: $CAP_SC07;
+      color: $CAP_PR02;
+    }
+    .ant-select-dropdown-menu-item-disabled{
+      color: $CAP_WARN;
+      line-height: $CAP_SS_S;
+      font-size: $CAP_SS_S2;
+    }
+  }
+}
