@@ -63,7 +63,7 @@
     "jsx-a11y/mouse-events-have-key-events": 2,
     "jsx-a11y/role-has-required-aria-props": 2,
     "jsx-a11y/role-supports-aria-props": 2,
-    "jsx-ally/click-events-have-key-events": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
     "react/forbid-prop-types": 0,
     "react/jsx-first-prop-new-line": [
       2,
@@ -77,6 +77,7 @@
     "react/require-extension": 0,
     "react/self-closing-comp": 0,
     "react/require-default-props": 0,
-    "react/prefer-stateless-function": 0
+    "react/prefer-stateless-function": 0,
+    "react/no-array-index-key": 0,
   }
 }

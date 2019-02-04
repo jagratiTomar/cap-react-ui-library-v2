@@ -19,10 +19,10 @@ export default class CapInput extends React.Component { // eslint-disable-line r
       delete rest.focusOnMount;
     }
     return (
-      <div className={this.props.className ? `cap-input ${this.props.className}` : "cap-input"} >
-        <Input {...rest} ref={(node) => { this.input = node; }}/>
-        { errorMessage && this.props.className && (this.props.className.indexOf('error') > -1 || this.props.className.indexOf('warning') > -1) &&
-          <span className="error-message">{this.props.errorMessage}</span>
+      <div className={this.props.className ? `cap-input ${this.props.className}` : "cap-input"}>
+        <Input {...rest} ref={(node) => { this.input = node; }} />
+        { errorMessage && this.props.className && (this.props.className.indexOf('error') > -1 || this.props.className.indexOf('warning') > -1)
+          && <span className="error-message">{this.props.errorMessage}</span>
         }
       </div>
     );

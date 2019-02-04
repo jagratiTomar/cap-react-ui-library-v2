@@ -12,11 +12,11 @@ export default class CapListLayout extends React.Component { // eslint-disable-l
   render() {
     return (
       <div className={this.props.className ? `cap-list-view-layout ${this.props.className}` : "cap-list-view-layout"}>
-        {this.props.capActionBar &&
-          <CapActionBar {...this.props.capActionBar}/>
+        {this.props.capActionBar
+          && <CapActionBar {...this.props.capActionBar} />
         }
-        {this.props.capTable &&
-          <CapTable className="cap-table" {...this.props.capTable} />
+        {this.props.capTable
+          && <CapTable className="cap-table" {...this.props.capTable} />
         }
       </div>
     );
