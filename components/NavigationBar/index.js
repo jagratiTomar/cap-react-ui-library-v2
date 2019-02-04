@@ -26,20 +26,19 @@ class NavigationBar extends React.Component { // eslint-disable-line react/prefe
       <React.Fragment>
         <Layout className={classNames(`${clsPrefix}-layout`)}>
           <Header className={classNames(`${clsPrefix}-header`)}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <div style={{ display: "flex", flexGrow: '1' }}>
-                {primarySelectProps && (
-                  <Select
-                    showSearch
-                    showHeader
-                    {...primarySelectProps}
-                  />
-                )}
-                {secondarySelectProps && <Divider type="vertical" className={classNames(`${clsPrefix}-divider`)} />}
-                {secondarySelectProps
+            <div style={{ display: "flex", flexGrow: '1' }}>
+              {primarySelectProps && (
+                <Select
+                  showSearch
+                  showHeader
+                  {...primarySelectProps}
+                />
+              )}
+              {secondarySelectProps && <Divider type="vertical" className={classNames(`${clsPrefix}-divider`)} />}
+              {secondarySelectProps
                   && <Select {...secondarySelectProps} />}
-              </div>
-              {menuProps
+            </div>
+            {menuProps
                 && (
                   <Menu
                     className={classNames(`${clsPrefix}-menu`)}
@@ -59,27 +58,26 @@ class NavigationBar extends React.Component { // eslint-disable-line react/prefe
                     }
                   </Menu>
                 )
-              }
-              {
-                userName
+            }
+            {
+              userName
                 && (
                   <div className={classNames(`${clsPrefix}-user`)}>
                     {userName[0]}
                   </div>
                 )
-              }
-              {onSettingsClick
+            }
+            {onSettingsClick
                 && <div className={classNames(`${clsPrefix}-setting`)}><img src={SettingsIcon} alt="" /></div>
-              }
-            </div>
+            }
           </Header>
           {
             sidebarProps
-            && (
-              <Sidebar
-                {...sidebarProps}
-              />
-            )
+              && (
+                <Sidebar
+                  {...sidebarProps}
+                />
+              )
           }
         </Layout>
       </React.Fragment>
