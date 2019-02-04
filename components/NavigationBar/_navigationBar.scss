@@ -34,7 +34,6 @@ $orgSelectPrefix: cap-select;
   align-items: center;
 }
 
-
 .#{$orgSelectPrefix}-selected-value-label {
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -42,15 +41,21 @@ $orgSelectPrefix: cap-select;
   max-width: 120px;
 }
 
+.#{$clsPrefix}-setting {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.#{$clsPrefix}-user,
 .#{$orgSelectPrefix}-selected-icon {
   border-radius: 50%;
   background-color: $CAP_G07;
   padding: 0px 10px;
-  display: flex;
-  align-items: center;
-  height: 32px;
   margin-right: 8px;
   font-weight: bold;
+  height: 32px;
+  display: flex;
+  align-items: center;
 }
 
 .#{$orgSelectPrefix}-header {

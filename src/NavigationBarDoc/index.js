@@ -57,6 +57,10 @@ export default class NavigationBarDoc extends Component { // eslint-disable-line
     this.setState({ selectedProduct: value })
   }
 
+  onSettingsClick = () => {
+
+  }
+
   render() {
     return (
       <div className="navigation-bar-info">
@@ -78,6 +82,7 @@ export default class NavigationBarDoc extends Component { // eslint-disable-line
               selectedItem: this.state.selectedMenuItem
             }}
             userName={"Jagrati"}
+            onSettingsClick={this.onSettingsClick}
           />
         </div>
         <PropertyTable data={infoData} />
