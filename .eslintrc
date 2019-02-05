@@ -71,7 +71,6 @@
     ],
     "react/destructuring-assignment": 1,
     "react/jsx-filename-extension": 0,
-    "react/jsx-space-before-closing": 0,
     "react/jsx-closing-bracket-location": 0,
     "react/jsx-no-target-blank": 0,
     "react/require-extension": 0,

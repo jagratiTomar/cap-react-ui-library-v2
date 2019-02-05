@@ -29,11 +29,47 @@ const sidebarItems = [
             title: 'Campaigns Long Long Name Test',
             key: 'campaigns',
             link: '/campaigns',
+            target: '_top',
           },
           {
             title: 'Incentive',
             key: 'incentive',
             link: '/incentive',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Standard Reports',
+    key: 'standard',
+    children: [
+      {
+        title: 'Category1',
+        key: 'category1',
+        children: [
+          {
+            title: 'Report1',
+            key: 'report1',
+            link: '/report1',
+            target: '_top',
+          },
+          {
+            title: 'Report2',
+            key: 'report2',
+            link: '/report2',
+          },
+        ],
+      },
+      {
+        title: 'Category2',
+        key: 'category2',
+        children: [
+          {
+            title: 'Report3',
+            key: 'report3',
+            link: '/report3',
+            target: '_top',
           },
         ],
       },
@@ -65,6 +101,7 @@ export default class CapSideBarDoc extends Component { // eslint-disable-line re
           <CapSideBar
             sidebarItems={sidebarItems}
             selectedMenuItem="exports"
+            searchSupportPortalUrl="http://support.capillarytech.com/support/search/solutions?term={{searchText}}"
           />
         </div>
         <PropertyTable data={infoData} />

@@ -1,0 +1,62 @@
+@import "../../styles/_variables.scss";
+
+$menuSearch: menu-search;
+
+.#{$menuSearch} {
+  position: relative;
+  margin: 16px 0 20px 0;
+  padding-right: 8px;
+  .anticon-close {
+    position: absolute;
+    right: 25px;
+    top: 30%;
+    color: $CAP_ICON;
+  }
+  .anticon-search {
+    left: 10px;
+    position: absolute;
+    top: 30%;
+    color: $CAP_ICON;
+  }
+  input {
+    height: 40px;
+    padding: 4px 30px;
+  }
+}
+
+.#{$menuSearch}-no-results {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .#{$menuSearch}-no-results-text {
+    margin-top: 8px;
+    text-align: center;
+    color: $CAP_G05;
+    font-size: 12px;
+  }
+}
+
+.#{$menuSearch}-popover {
+  padding-top: 0;
+  width: 260px;
+  .ant-popover-arrow {
+    display: none;
+  }
+  .ant-popover-inner-content {
+    padding: 0px;
+  }
+  .#{$menuSearch}-portal-url-container {
+    border-top: 1px solid #d6d6d6;
+    padding: 8px 0 8px 16px;
+    a {
+      color: #2e89df;
+    }
+  }
+  .content {
+    min-height: 192px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

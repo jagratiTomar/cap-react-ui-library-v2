@@ -1,3 +1,17 @@
+# Guide lines
+Please follow below points while coding.
+
+- Create a new component using commands mentioned below to generate skeleton of the component and documentation. Need to run same twice, one for component itself and another one for its documentation.
+
+```
+npm run generate // select component and add component definition. Example: CapButton
+npm run generate // select documentation and add props, description and usage example.
+```
+
+- Components name should be in `Pascal Case`.
+
+- Always use unique prefix classname for each component to avoid class name conflicts. Convention to follow is to use underscore format of the component name. For exmple, `clsPrefix` for CapButton component can be `cap-button`, and all the classes used inside CapButton component can have this `clsPrefix` as prefix.
+
 Steps to build:
 ### Generate component 
 #### npm run generate
