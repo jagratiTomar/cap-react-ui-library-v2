@@ -1,9 +1,9 @@
 /**
-* NavigationBarDoc
+* CapTopBarDoc
 */
 import React, { Component } from "react";
 import PropertyTable from '../../helpers/PropertyTable';
-import { NavigationBar } from "../../components";
+import { CapTopBar } from "../../components";
 import "./info.scss";
 
 const infoData = [
@@ -45,47 +45,6 @@ const menuItems = [
   { label: 'Audience', link: '/Audience', key: "audience" },
 ];
 
-const sidebarItems = [
-  {
-    title: 'Favourite Reports',
-    key: 'favourite_reports',
-    children: [
-      {
-        title: 'Segments',
-        key: 'segments',
-        children: [
-          {
-            title: 'Campaigns Long Long Name Test',
-            key: 'campaigns',
-            link: '/campaigns',
-          },
-          {
-            title: 'Incentive',
-            key: 'incentive',
-            link: '/incentive',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Data Exports',
-    key: 'data_exports',
-    children: [
-      {
-        title: 'Exports',
-        key: 'exports',
-        link: '/exports',
-      },
-    ],
-  },
-  {
-    title: 'Creatives',
-    key: 'creatives',
-    link: '/creatives',
-  },
-];
-
 export default class NavigationBarDoc extends Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
@@ -117,7 +76,7 @@ export default class NavigationBarDoc extends Component { // eslint-disable-line
     return (
       <div className="navigation-bar-info">
         <div className="navigation-bar-showcase">
-          <NavigationBar
+          <CapTopBar
             primarySelectProps={{
               items: orgsList,
               selectedItem: selectedOrg,
@@ -132,11 +91,6 @@ export default class NavigationBarDoc extends Component { // eslint-disable-line
               items: menuItems,
               selectedItem: selectedMenuItem,
             }}
-            // sidebarProps={{
-            //   sidebarItems,
-            //   onMenuItemClick: this.onMenuItemClick,
-            //   selectedMenuItem,
-            // }}
             userName="Jagrati"
             onSettingsClick={this.onSettingsClick}
           />

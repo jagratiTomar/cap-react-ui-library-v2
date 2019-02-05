@@ -86,4 +86,5 @@ CapSideBar.propTypes = {
   sidebarItems: PropTypes.array,
   defaultActiveKey: PropTypes.string,
   selectedMenuItem: PropTypes.string,
+  searchData: PropTypes.array,
 };

@@ -1,9 +1,9 @@
 // import React from 'react';
 // import { shallow } from 'enzyme';
 
-// import NavigationBar from '../index';
+// import CapTopBar from '../index';
 
-describe('<NavigationBar />', () => {
+describe('<CapTopBar />', () => {
   it('Expect to have unit tests specified', () => {
     expect(true).toEqual(false);
   });
