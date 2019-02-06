@@ -4,8 +4,8 @@ Guidlines to follow while coding.
 - Create a new component using commands mentioned below to generate skeleton of the component and documentation. Need to run same twice, one for component itself and another one for its documentation.
 
 ```
-npm run generate // select component and add component definition. Example: CapButton
-npm run generate // select documentation and add props, description and usage example.
+npm run generate // select component options and add component definition. Example: CapButton
+npm run generate // select documentation and add respective details.
 ```
 
 - Components name should be in `Pascal Case`.
@@ -15,6 +15,8 @@ npm run generate // select documentation and add props, description and usage ex
 - `classnames` package can be used for maintaining classnames.
 
 - Always import the colors and typography from `_variables.scss` file.
+
+- All new components should be published along with there unit test cases.
 
 Steps to build:
 ### Generate component 

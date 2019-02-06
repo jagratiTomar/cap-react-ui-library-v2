@@ -33,24 +33,28 @@ export default class CapSideBar extends React.Component {
       if (item.children) {
         const obj = { category: item.title, children: [] };
         item.children.forEach((child) => {
-          if (!child.children) {
+          if (!child.children && child.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
             obj.children.push(child);
-          } else {
+          } else if (child.children) {
             const subCategory = { category: item.title, children: [], subCategory: child.title };
             child.children.forEach((child2) => {
-              subCategory.children.push(child2);
+              if (child2.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
+                subCategory.children.push(child2);
+              }
             });
-            categorizedResults.push(subCategory);
+            if (subCategory.children.length > 0) {
+              categorizedResults.push(subCategory);
+            }
           }
         });
         if (obj.children.length > 0) {
           categorizedResults.push(obj);
         }
-      } else {
+      } else if (item.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
         nonCategorizedResults.push(item);
       }
     });
-    this.setState({ allSearchResults: nonCategorizedResults.concat(categorizedResults) });
+    this.setState({ allSearchResults: nonCategorizedResults.concat(categorizedResults), showSearchLoader: false });
   }
 
   getTreeNodes = (data) => {

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
 import {
   Input, Icon, Popover, Spin,
 } from 'antd';
 
 import './_menuSearch.scss';
 import WarningIcon from '../../assets/icons/warning.svg';
-
+import NewTabIcon from '../../assets/icons/open-in-new.svg';
 const clsPrefix = 'menu-search';
 
 export class MenuSearch extends Component {
@@ -58,8 +57,8 @@ export class MenuSearch extends Component {
 
   renderItem = (item) => {
     const { handleItemClick } = this.props;
-    const linkProps = { to: item.link };
-    const newTabLinkProps = { to: item.link, target: "_blank" };
+    const linkProps = { href: item.link };
+    const newTabLinkProps = { href: item.link, target: "_blank" };
     if (item.target) { linkProps.target = item.target; }
     if (handleItemClick) {
       linkProps.onClick = (e) => {
@@ -79,10 +78,10 @@ export class MenuSearch extends Component {
     }
     return (
       <div className="link-items" key={`item-${item.key}`}>
-        <Link {...linkProps}>{this.generateHighlightedText(item.text)}</Link>
-        <Link {...newTabLinkProps}>
-          <div className="new-tab-link-wrapper"><i className="material-icons">open_in_new</i></div>
-        </Link>
+        <a {...linkProps}>{this.generateHighlightedText(item.title)}</a>
+        <a {...newTabLinkProps}>
+          <div className="new-tab-link-wrapper"><img src={NewTabIcon} alt="" /></div>
+        </a>
       </div>
     );
   }
@@ -92,8 +91,27 @@ export class MenuSearch extends Component {
       if (!data.children) {
         return this.renderItem(data);
       }
+      if (data.category && !data.subCategory) {
+        const childrenHtml = data.children.map((childItem) => this.renderItem(childItem, `childItem-${childItem.key}`));
+        return (
+          <div key={`item-group-${data.key}`} className="links-group">
+            <div className="group-heading">{data.category}</div>
+            <div className="group-children">{childrenHtml}</div>
+          </div>);
+      } if (data.category && data.subCategory) {
+        const childrenHtml = data.children.map((childItem) => this.renderItem(childItem, `childItem-${childItem.key}`));
+        return (
+          <div key={`item-group-${data.key}`} className="links-group">
+            <div className="group-heading">{`${data.category} > ${data.subCategory}`}</div>
+            <div className="group-children">{childrenHtml}</div>
+          </div>);
+      }
     });
-    return result;
+    return (
+      <div className="links-content">
+        {result}
+      </div>
+    );
   }
 
   render() {
